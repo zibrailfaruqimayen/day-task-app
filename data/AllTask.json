@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "go to market",
+      "description": "milk-1,eggs-12,potato-2kg",
+      "status": "todo"
+    },
+    {
+      "id": "2",
+      "title": "go to gym",
+      "description": "do leg",
+      "status": "todo"
+    }
+  ]
+}
