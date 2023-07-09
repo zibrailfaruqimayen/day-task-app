@@ -1,5 +1,7 @@
 "use client";
+
 import { BsJournalPlus } from "react-icons/bs";
+import { v4 as uuidv4 } from "uuid";
 import Modal from "./Modal";
 import { FormEventHandler, useState } from "react";
 import { addTodo } from "@/api";
@@ -16,7 +18,7 @@ const AddTask = () => {
     e.preventDefault();
     console.log(title, description, status);
     await addTodo({
-      id: "5",
+      id: uuidv4(),
       title: title,
       description: description,
       status: status,
@@ -31,7 +33,7 @@ const AddTask = () => {
     <div>
       <button
         onClick={() => setModalOpen(true)}
-        className="btn btn-info w-full"
+        className="btn btn-info w-full text-white"
       >
         Add Task <BsJournalPlus className="" size={20} />
       </button>

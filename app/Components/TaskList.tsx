@@ -12,15 +12,16 @@ const TaskList: React.FC<TaskListProps> = ({ tasks }) => {
         {/* head */}
         <thead>
           <tr>
+            <th>#</th>
             <th>Task Title</th>
             <th>Task Description</th>
             <th>Status</th>
-            <th>Action</th>
+            <th className="text-center">Action</th>
           </tr>
         </thead>
         <tbody>
-          {tasks.map((task) => (
-            <Task task={task} key={task.id} />
+          {tasks.map((task, index) => (
+            <Task task={task} key={task.id} index={index} />
           ))}
         </tbody>
       </table>
