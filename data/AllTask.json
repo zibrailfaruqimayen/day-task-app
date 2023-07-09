@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "id": "2",
-      "title": "go to pet shop ",
-      "description": "buy a cat",
-      "status": "todo"
-    },
-    {
       "id": "7fa674a3-8f34-4a65-83bf-f682982a3377",
       "title": "got hospital store",
       "description": "buy some medicine ",
@@ -16,6 +10,12 @@
       "id": "f55ef413-0912-444d-a805-57f9a1fdc189",
       "title": "go to market",
       "description": "buy some apple",
+      "status": "todo"
+    },
+    {
+      "id": "cdb725c5-7fd2-4b02-9a05-18127c6f379a",
+      "title": "hello",
+      "description": "good",
       "status": "todo"
     }
   ]

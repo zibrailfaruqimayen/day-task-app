@@ -32,18 +32,6 @@ export const editTodo = async (task: ITask): Promise<ITask> => {
   const updatedTodo = await res.json();
   return updatedTodo;
 };
-// complete task api
-export const updateTodo = async (task: ITask): Promise<ITask> => {
-  const res = await fetch(`${baseUrl}/tasks/${task.id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(task),
-  });
-  const updatedStatus = await res.json();
-  return updatedStatus;
-};
 
 // delete task api
 export const deleteTodo = async (id: string): Promise<void> => {
