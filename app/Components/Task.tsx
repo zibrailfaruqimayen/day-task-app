@@ -9,7 +9,7 @@ const Task: React.FC<TaskProps> = ({ task }) => {
     <tr key={task.id}>
       <td>{task.title}</td>
       <td>{task.description}</td>
-      <td>{task.status}</td>
+      <td className="text-gray-400">{task.status}</td>
       <td>Blue</td>
     </tr>
   );
