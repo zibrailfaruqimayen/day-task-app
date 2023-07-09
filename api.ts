@@ -1,7 +1,7 @@
 import { ITask } from "./types/tasks";
 
 const baseUrl = "http://localhost:3005";
-
+// display all task
 export const getAllTasks = async (): Promise<ITask[]> => {
   const res = await fetch(`${baseUrl}/tasks`, { cache: "no-store" });
   const todos = await res.json();
@@ -31,6 +31,18 @@ export const editTodo = async (task: ITask): Promise<ITask> => {
   });
   const updatedTodo = await res.json();
   return updatedTodo;
+};
+// complete task api
+export const updateTodo = async (task: ITask): Promise<ITask> => {
+  const res = await fetch(`${baseUrl}/tasks/${task.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(task),
+  });
+  const updatedStatus = await res.json();
+  return updatedStatus;
 };
 
 // delete task api

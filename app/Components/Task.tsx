@@ -5,7 +5,7 @@ import { ITask } from "@/types/tasks";
 import React, { FormEventHandler, useState } from "react";
 import Modal from "./Modal";
 import { useRouter } from "next/navigation";
-import { deleteTodo, editTodo } from "@/api";
+import { deleteTodo, editTodo, updateTodo } from "@/api";
 
 interface TaskProps {
   task: ITask;
@@ -24,7 +24,7 @@ const Task: React.FC<TaskProps> = ({ task, index }) => {
   const handleEditTask: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
 
-    await editTodo({
+    await updateTodo({
       id: task.id,
       title: titleToEdit,
       description: descriptionToEdit,
@@ -34,6 +34,7 @@ const Task: React.FC<TaskProps> = ({ task, index }) => {
     setModalOpenEdit(false);
     router.refresh();
   };
+
   const handleDeleteTask = async (id: string) => {
     await deleteTodo(id);
     setModalOpenDelete(false);
