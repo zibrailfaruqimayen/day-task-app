@@ -4,7 +4,7 @@ import { BsJournalPlus } from "react-icons/bs";
 import { v4 as uuidv4 } from "uuid";
 import Modal from "./Modal";
 import { FormEventHandler, useState } from "react";
-import { addTodo } from "@/api";
+import { addTodo } from "@/api/api";
 import { useRouter } from "next/navigation";
 
 const AddTask = () => {

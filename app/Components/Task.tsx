@@ -5,7 +5,7 @@ import { ITask } from "@/types/tasks";
 import React, { FormEventHandler, useState } from "react";
 import Modal from "./Modal";
 import { useRouter } from "next/navigation";
-import { deleteTodo, editTodo } from "@/api";
+import { deleteTodo, editTodo } from "@/api/api";
 
 interface TaskProps {
   task: ITask;
